@@ -1,4 +1,4 @@
 # appunti
 Così non intaso discord
 
-Wow, guarda mamma! Un documento!
+Aiuto la cli di git fa una merda con github
