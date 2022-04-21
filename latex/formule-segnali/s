@@ -1,0 +1,4 @@
+#! /bin/bash
+
+latex formulario.tex
+xdvi formulario.dvi

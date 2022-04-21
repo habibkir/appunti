@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{mathrsfs} %mathcal{F} = simbolo di trasformata
+\usepackage{amsmath} %da abusare
+\usepackage{amsfonts} %appartiene a \mathbb{R}
+
+\begin{document}
+
+Formule della serie
+\begin{itemize}
+\item Sintesi \begin{equation*}
+  x(t) = \sum_{k=-\infty}^{+\infty} X_k e^{j2\pi kf_0 t}
+\end{equation*}
+\item Analisi \begin{equation*}
+  X_k = \int_{-\infty}^{+\infty} x(t) e^{-j2\pi kf_0 t} dt
+\end{equation*}
+\end{itemize}
+
+Casi particolari (quelli con $X_k$ e $X_{-k}$)
+\begin{itemize}
+\item x(t) reale \begin{equation*}
+  X_{-k} = X^*_k \text{ (simmetria Hermitiana)}
+\end{equation*}
+\item x(t) pari \begin{equation*}
+  X_{-k} = X_k 
+\end{equation*}
+\item x(t) dispari \begin{equation*}
+  X_{-k} = -X_k
+\end{equation*}
+\item x(t) pari e reale \begin{align*}
+  &X_{-k} = X_k\\
+  &X_k \in \mathbb{R}
+\end{align*}
+\item x(t) dispari e reale \begin{align*}
+  &X_{-k} = -X_k \\
+  &X_k\text{ puramente immaginario}
+\end{align*}
+\end{itemize}
+  
+Trasformata di Fourier (valgono tutte le simmetrie della serie per tutti gli stessi casi (credo))
+\begin{itemize}
+\item Analisi \begin{equation*}
+  X(f)=\mathcal{F}\{x(t)\}=\int_{-\infty}^{\infty} x(t) e^{-j2\pi ft} dt
+\end{equation*}
+\item Sintesi \begin{equation*}
+  x(t)=\int_{-\infty}^{\infty} X(f) e^{j2\pi ft} df
+\end{equation*}
+\end{itemize}
+
+Trasformate di funzioni particolari
+\begin{itemize}
+\item rect \begin{equation*}
+  \mathcal{F}\{rect(\frac{t}{B})\} = B \emph{sinc}(tB)
+\end{equation*}
+\item tri
+\item esponenziale monolatera \begin{equation*}
+  \mathcal{F}\{e^{\frac{-t}{T}}u(t)\} = \frac{T}{1 + j2\pi fT}
+\end{equation*}
+\item sinc
+\end{itemize}
+
+Teoremi trasformata
+\begin{itemize}
+\item Teorema della derivazione
+\item Teorema dell'integrazione
+\item Teorema del ritardo
+\item Teorema della modulazione %per la radio
+\item Teorema della coseno modulazione %per la radio, doppio
+\item Teorema del cambiamento di scala %dimostrazione scientifica delle vocine accellerate
+\item Teorema della dualità %chi lo vuole un flashback al Tardella?
+\item Teorema della convoluzione
+\item Teorema del prodotto
+\end{itemize}
+
+Formule per variabili aleatorie : Indici
+\begin{itemize}
+\item Una variabile \begin{itemize}
+\item Media
+\item Potenza
+\item Varianza
+\end{itemize}
+\item Più variabili \begin{itemize}
+  \item Correlazione
+  \item Covarianza
+  \item Indice di covarianza
+\end{itemize}
+\end{itemize}
+
+\end{document}
