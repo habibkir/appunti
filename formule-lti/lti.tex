@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb} %\circledast (circled asterisk) per la convoluzione
+\usepackage{mathrsfs} %\mathcal{F} per fourier
+
+\begin{document}
+diciamo che $y(t) = T[x(t)]$
+\begin{itemize}
+
+\item Risposta impulsiva \begin{equation*}
+  h(t) = T[\delta (t)]
+\end{equation*}
+
+\item Risposta in frequenza \begin{equation*}
+  H(f) = \mathcal{F}\{h(t)\} = \int_{-\infty}^{\infty} h(t) e^{-j2\pi f_0 t} dt
+\end{equation*}
+
+\item Uscita del sistema \begin{align*}
+  y(t) &= h(t) \circledast x(t)\\
+  Y(f) &= H(f) \times X(f)
+\end{align*}
+
+\item Risposta nel tempo sistemi in serie\begin{align*}
+  y(t) &= (x(t) \circledast h_1(t)) \circledast h_2(t)\\
+       &= x(t) \circledast (h_1(t) \circledast h_2(t))\\
+  h_{eq}(t)&= h_1(t) \circledast h_2(t)
+\end{align*}
+
+\item Risposta in frequenza sistemi in serie \begin{align*}
+  Y(f) &= (X(f) * H_1(f)) * H_2(f)\\
+       &= X(f) * (H_1(f) * H_2(f))\\
+  H_{eq}(f) &= H_1(f) * H_2(f)
+\end{align*}
+
+\item Sistemi in parallelo \begin{align*}
+  h_{eq}(t) &= h_1(t) + h_2(t)\\
+  H_{eq}(f) &= H_1(f) * H_2(f)
+\end{align*}
+
+\item Risposta per input armonico \begin{align*}
+  x(t) &= A cos(2\pi f_0 t + \phi _0)\\
+  y(t) &= \lvert H(f_0) \rvert A cos(2\pi f_0 t + \phi _0 + \angle H(f_0))
+\end{align*}
+
+\end{itemize}
+
+\end{document}
+
+
