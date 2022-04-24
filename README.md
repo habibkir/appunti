@@ -1,4 +1,4 @@
 # appunti
 Così non intaso discord
 
-Aiuto la cli di git fa una merda con github
+Non vi garantisco di aver scritto tutto bene e mi scuso per le possibili scazzate, lo sto riguardando ora
