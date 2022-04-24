@@ -17,7 +17,7 @@ Teoremi Abusati
   \end{equation*}
   
   \item Ritardo \begin{equation*}
-    \mathcal{F}\{x(t-t_0)} = e^{-j2\pi ft_0} \mathcal{F}\{x(t)\}
+    \mathcal{F}\{x(t-t_0)\} = e^{-j2\pi ft_0} \mathcal{F}\{x(t)\}
   \end{equation*}
 \end{itemize}
 
@@ -61,9 +61,23 @@ Potenze
 
 Merdate con integrali e funzioni pari/dispari
 \begin{itemize}
-  \item se $x(t)$ pari \begin{equation*}
+  \item Se $x(t)$ pari (ad esempio il coseno) \begin{equation*}
     \int_{-b}^{-a} x(t) dt + \int_{a}^{b} x(t) dt = 2\int_{a}^{b} x(t) dt
   \end{equation*}
+
+  \item Col caso particolare \begin{align*}
+    &\int_{-b}^{0} x(t) dt + \int_{0}^{b} x(t) dt = 2\int_{a}^{b} x(t) dt \text{ che possiamo scrivere come}\\
+    &\int_{-b}^{b} x(t) dt = 2\int_{a}^{b} x(t) dt
+  \end{align*}
+
+  \item Se $x(t)$ dispari (ad esempio il seno) \begin{equation*}
+    \int_{-b}^{-a} x(t) dt + \int_{a}^{b} x(t) dt = 0
+  \end{equation*}
+
+  \item Col caso particolare \begin{align*}
+    &\int_{-b}^{0} x(t) dt + \int_{0}^{b} x(t) dt = 0 \text{ che possiamo scrivere come}\\
+    &\int_{-b}^{b} x(t) dt = 0
+  \end{align*}
 \end{itemize}
 
 Altre formule abusate negli LTI
