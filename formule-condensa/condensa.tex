@@ -80,12 +80,27 @@ Merdate con integrali e funzioni pari/dispari
   \end{align*}
 \end{itemize}
 
-Altre formule abusate negli LTI
+Altre formule abusate negli LTI, se scriviamo il sistema come $y(t) = \mathcal{T}[x(t)]$
 \begin{itemize}
-  \item Risposta impulsiva
-  \item Risposta in frequenza
-  \item Onda elementare che passa per un LTI
-  \item Densità spettrale di potenza / $S_{XX}$ di un segnale che passa per un LTI
+  \item Risposta impulsiva \begin{align*}
+    &h(t) = \mathcal{T}[\delta (t)]\\
+    &y(t) = h(t) \circledast x(t)
+  \end{align*}
+  
+  \item Risposta in frequenza \begin{align*}
+    &H(f) = \mathcal{F}\{h(t)\}\\
+    &Y(f) = X(f) H(f)\\
+    &H(f) = \frac{Y(f)}{X(f)}\\
+  \end{align*}
+    
+  \item Onda elementare che passa per un LTI \begin{align*}
+    &x(t) = A cos(2\pi f_0t + \phi_0) \to y(t) = \lvert H(f_0) \rvert A cos(2\pi f_0t + \phi_0 + \angle H(f_0))\\
+    &x(t) = A sin(2\pi f_0t + \phi_0) \to y(t) = \lvert H(f_0) \rvert A sin(2\pi f_0t + \phi_0 + \angle H(f_0))\\
+  \end{align*}
+    
+  \item Densità spettrale di potenza ($S_{XX}$) di un segnale che passa per un LTI \begin{equation*}
+    S_{yy} = S_{XX} \lvert H(f) \rvert ^2
+  \end {equation*}
 \end{itemize}
 
 \end{document}
