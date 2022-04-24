@@ -3,32 +3,57 @@
 \usepackage{amsfonts}
 \usepackage{amssymb} % ç\circledast
 \usepackage{mathrsfs} % \mathcal{F}
-%per chi fosse interessato a "ma sto coglione la sa usare una math mode?"
-%sto editor non segna la sintassi di un cazzo in math mode
 
 \begin{document}
-
 Basi di numeri complessi
 
 Cose che usa per seni e coseni
 
+Teoremi Abusati
+
+\begin{itemize}
+  \item Derivazione \begin{equation*}
+    \mathcal{F}\{\frac{dx(t)}{dt}\} = j2\pi f\mathcal{F}\{x(t)\}
+  \end{equation*}
+  
+  \item Ritardo \begin{equation*}
+    \mathcal{F}\{x(t-t_0)} = e^{-j2\pi ft_0} \mathcal{F}\{x(t)\}
+  \end{equation*}
+\end{itemize}
+
+Trasformate Importanti
+\begin{itemize}
+  \item Rect \begin{equation*}
+    \mathcal{F}\{rect(\frac{t}{\tau }\} = \tau sinc(f\tau )
+  \end{equation*}
+  
+  \item Sinc \begin{equation*}
+    \mathcal{F}\{sinc(t\tau )\} = \frac{1}{\tau } rect(\frac{f}{\tau }
+    %O qualunque cosa funzioni col teorema del cambiamento di scala
+  \end{equation*}
+  
+  \item Tri \begin{equation*}
+    \mathcal{F}\{tri(t)\} = sinc^2(f)
+  \end{equation*}
+\end{itemize}
+
 Potenze
 \begin{itemize}
-\item Potenza istantanea di un segnale $x(t)$ \begin{equation*}
-  x^2(t)
-\end{equation*} %minchia che spreco di notazione
+  \item Potenza istantanea di un segnale $x(t)$ \begin{equation*}
+    x^2(t)
+  \end{equation*} %minchia che spreco di notazione
+    
+  \item Potenza media di un segnale periodico $x(t)$ di periodo $T_0$\begin{equation*}
+    \lim_{T_0 \to \infty} \frac{1}{T_0} \int_{- \frac{T_0}{2}}^{\frac{T_0}{2}} x^2(t)
+  \end{equation*}
   
-\item Potenza media di un segnale periodico $x(t)$ di periodo $T_0$\begin{equation*}
-  \lim_{T_0 \to \infty} \frac{1}{T_0} \int_{- \frac{T_0}{2}}^{\frac{T_0}{2}} x^2(t)
-\end{equation*}
-
-\item Potenza media di un segnale generico a potenza finita \begin{equation*}
-  \lim_{T_0 \to \infty} \frac{1}{T_0} \int_{- \frac{T_0}{2}}^{\frac{T_0}{2}} x^2(t)
-\end{equation*}
-  
-\item \textbf{Potenza di un segnale armonico} di ampiezza $A$( \begin{equation*}
-  \frac{A^2}{2} \text{ non ci interessa la fase o la frequenza, solo l'ampiezza}
-\end{equation*}
+  \item Potenza media di un segnale generico a potenza finita \begin{equation*}
+    \lim_{T_0 \to \infty} \frac{1}{T_0} \int_{- \frac{T_0}{2}}^{\frac{T_0}{2}} x^2(t)
+  \end{equation*}
+    
+  \item \textbf{Potenza di un segnale armonico} di ampiezza $A$ \begin{equation*}
+    \frac{A^2}{2} \text{ non ci interessa la fase o la frequenza, solo l'ampiezza}
+  \end{equation*}
 \end{itemize}
 
 %Cubo di sto materiale con questa densità, l'integrale della densità in sto cubo fa il peso
@@ -36,15 +61,17 @@ Potenze
 
 Merdate con integrali e funzioni pari/dispari
 \begin{itemize}
-\item [insert eldricht truth here]
+  \item se $x(t)$ pari \begin{equation*}
+    \int_{-b}^{-a} x(t) dt + \int_{a}^{b} x(t) dt = 2\int_{a}^{b} x(t) dt
+  \end{equation*}
 \end{itemize}
 
 Altre formule abusate negli LTI
 \begin{itemize}
-\item Risposta impulsiva
-\item Risposta in frequenza
-\item Onda elementare che passa per un LTI
-\item Densità spettrale di potenza / $S_{XX}$ di un segnale che passa per un LTI
+  \item Risposta impulsiva
+  \item Risposta in frequenza
+  \item Onda elementare che passa per un LTI
+  \item Densità spettrale di potenza / $S_{XX}$ di un segnale che passa per un LTI
 \end{itemize}
 
 \end{document}
