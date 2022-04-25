@@ -1,4 +1,0 @@
-#! /bin/bash
-
-latex lti.tex
-xdvi lti.dvi

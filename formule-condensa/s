@@ -1,4 +1,0 @@
-#! /bin/bash
-
-latex condensa.tex
-xdvi condensa.dvi
